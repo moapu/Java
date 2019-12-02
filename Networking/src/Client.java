@@ -1,16 +1,14 @@
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Date;
 
 public class Client {
 
     public static void main(String[] args) {
 
-        DataOutputStream toServer = null;
-        DataInputStream fromServer = null;
+        DataOutputStream toServer;
+        DataInputStream fromServer;
 
         try {
             Socket socket = new Socket("localhost", 8000);
